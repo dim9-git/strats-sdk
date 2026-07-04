@@ -1,6 +1,6 @@
 from pathlib import Path
 import pandas as pd
-from .fetching_and_caching import fetch_json_with_retries
+from .fetcher import fetch_json_with_retries
 
 
 DATA_DAILY_BASE_URL = "https://raw.githubusercontent.com/ErcinDedeoglu/crypto-market-data/main/data/daily"
