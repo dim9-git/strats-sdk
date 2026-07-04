@@ -16,6 +16,18 @@ def ensure_utc_index(bars: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def last_closed_bar_time(bars: pd.DataFrame, timeframe: str) -> pd.Timestamp | None:
+    if bars.empty:
+        return None
+
+    bar_delta = pd.Timedelta(timeframe)
+    now = pd.Timestamp.now(tz="UTC")
+    closed = bars[bars.index + bar_delta <= now]
+    if closed.empty:
+        return None
+    return closed.index[-1]
+
+
 def color_return(val):
     if pd.isna(val):
         return ""
