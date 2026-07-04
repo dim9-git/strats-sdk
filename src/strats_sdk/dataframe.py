@@ -7,6 +7,15 @@ def ensure_datetime_index(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def ensure_utc_index(bars: pd.DataFrame) -> pd.DataFrame:
+    out = bars.sort_index()
+    if out.index.tz is None:
+        out.index = out.index.tz_localize("UTC")
+    else:
+        out.index = out.index.tz_convert("UTC")
+    return out
+
+
 def color_return(val):
     if pd.isna(val):
         return ""
