@@ -2,7 +2,7 @@ from typing import Iterator
 
 import pandas as pd
 
-from featured_strats_utils.fetcher import get_cache_path, fetcher
+from strats_sdk.fetcher import get_cache_path, fetcher
 from .base import CcxtParams, make_ccxt_exchange
 
 

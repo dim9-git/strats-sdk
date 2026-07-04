@@ -10,7 +10,7 @@ import ccxt
 import pandas as pd
 import requests
 
-from featured_strats_utils.fetcher import fetcher, get_cache_path
+from strats_sdk.fetcher import fetcher, get_cache_path
 
 FUTURES_KLINES = "https://fapi.binance.com/fapi/v1/klines"
 FUNDING_URL = "https://fapi.binance.com/fapi/v1/fundingRate"

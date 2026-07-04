@@ -3,7 +3,7 @@ from typing import Iterator
 import ccxt
 import pandas as pd
 
-from featured_strats_utils.fetcher import get_cache_path, fetcher
+from strats_sdk.fetcher import get_cache_path, fetcher
 from .base import CcxtParams, make_ccxt_exchange
 
 def fetch_spot(params: CcxtParams) -> pd.DataFrame:

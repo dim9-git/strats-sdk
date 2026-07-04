@@ -7,7 +7,7 @@ import logging
 import requests
 
 import pandas as pd
-from featured_strats_utils.fetcher import fetcher, get_cache_path
+from strats_sdk.fetcher import fetcher, get_cache_path
 
 logger = logging.getLogger(__name__)
 
