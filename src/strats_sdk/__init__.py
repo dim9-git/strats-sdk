@@ -17,5 +17,7 @@ __all__ = [
     'sparse_cooldown', 'color_return', 'ensure_utc_index', 'last_closed_bar_time',
     'rolling_zscore',
     'INDICATOR_URLS',  'DATA_DAILY_BASE_URL', 'load_daily_json_data', 'load_all_indicators',
-    'DataRequest', 'MarketSnapshot', 'Signal', 'Strategy'
+    'DataRequest', 'MarketSnapshot', 'Signal', 'Strategy',
 ]
+
+# Kafka is optional (strats-sdk[kafka]); import from strats_sdk.kafka directly.
