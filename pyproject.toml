@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 kafka = ["kafka-python>=3"]
+rabbitmq = ["pika>=1.3"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

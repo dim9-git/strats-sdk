@@ -20,4 +20,7 @@ __all__ = [
     'DataRequest', 'MarketSnapshot', 'Signal', 'Strategy',
 ]
 
-# Kafka is optional (strats-sdk[kafka]); import from strats_sdk.kafka directly.
+# Messaging buses are optional extras:
+#   pip install 'strats-sdk[kafka]'    → strats_sdk.kafka
+#   pip install 'strats-sdk[rabbitmq]' → strats_sdk.rabbit
+# Event schemas are also available from strats_sdk.messaging.
