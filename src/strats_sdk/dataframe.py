@@ -16,6 +16,11 @@ def ensure_utc_index(bars: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def today_str(*, tz: str = "UTC") -> str:
+    """Current calendar date as ``YYYY-MM-DD`` (default UTC)."""
+    return pd.Timestamp.now(tz=tz).strftime("%Y-%m-%d")
+
+
 def last_closed_bar_time(bars: pd.DataFrame, timeframe: str) -> pd.Timestamp | None:
     if bars.empty:
         return None
